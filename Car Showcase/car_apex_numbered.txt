@@ -1,0 +1,188 @@
+
+---------- CAR-APEX.HTML
+[1]<!DOCTYPE html>
+[2]<html lang="en">
+[3]  <head>
+[4]    <meta charset="UTF-8" />
+[5]    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+[6]    <title>Apex GT — Car Prime</title>
+[7]    <link rel="preconnect" href="https://fonts.googleapis.com" />
+[8]    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+[9]    <link
+[10]      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+[11]      rel="stylesheet"
+[12]    />
+[13]    <link rel="stylesheet" href="styles.css" />
+[14]  </head>
+[15]  <body>
+[16]    <div class="page">
+[17]      <header class="site-header">
+[18]        <div class="logo">
+[19]          <div class="logo__mark"></div>
+[20]          <div class="logo__text">
+[21]            <strong>Car</strong>
+[22]            <span>Prime</span>
+[23]          </div>
+[24]        </div>
+[25]        <nav class="site-nav">
+[26]          <a href="index.html#showcase">Home</a>
+[27]          <a class="active" href="index.html#buy">Garage</a>
+[28]          <a href="index.html#faq">FAQ</a>
+[29]        </nav>
+[30]        <div class="header-actions">
+[31]          <a class="action solid header-cta" href="mailto:concierge@carprime.com"
+[32]            >Get a Quote</a
+[33]          >
+[34]        </div>
+[35]      </header>
+[36]
+[37]      <main class="car-detail">
+[38]        <a class="back-link" href="index.html#buy">&larr; Back to the garage</a>
+[39]        <section class="car-detail__hero" data-animate>
+[40]          <div class="car-detail__copy">
+[41]            <p class="hero__eyebrow">Apex GT</p>
+[42]            <h1>2024 Apex GT Carbon Edition</h1>
+[43]            <p>
+[44]              Our flagship coupe is engineered for relentless track duty and the
+[45]              night drive home. The carbon chassis, rear steering, and adaptive
+[46]              aero deliver razor sharp feedback without sacrificing daily
+[47]              comfort.
+[48]            </p>
+[49]            <p class="car-detail__price">From $248,500</p>
+[50]            <div class="car-detail__badges">
+[51]              <span class="car-detail__badge">Carbon skin</span>
+[52]              <span class="car-detail__badge">Coupe</span>
+[53]              <span class="car-detail__badge">AWD torque split</span>
+[54]            </div>
+[55]          </div>
+[56]          <div class="car-detail__media">
+[57]            <img src="1.png" alt="Apex GT carbon edition" />
+[58]          </div>
+[59]        </section>
+[60]
+[61]        <section class="car-detail__stats" data-animate>
+[62]          <article class="spec-card">
+[63]            <span>Max Power</span>
+[64]            <strong>680 HP</strong>
+[65]            <p>Hand-built twin-turbo V8 with lightweight internals.</p>
+[66]          </article>
+[67]          <article class="spec-card">
+[68]            <span>0–60 mph</span>
+[69]            <strong>3.1 s</strong>
+[70]            <p>Launch control optimized for street or slicks.</p>
+[71]          </article>
+[72]          <article class="spec-card">
+[73]            <span>Top Speed</span>
+[74]            <strong>206 mph</strong>
+[75]            <p>Active aero trims drag at high speed for stability.</p>
+[76]          </article>
+[77]          <article class="spec-card">
+[78]            <span>Chassis</span>
+[79]            <strong>Carbon tub</strong>
+[80]            <p>360° carbon cell with integrated roll protection.</p>
+[81]          </article>
+[82]        </section>
+[83]
+[84]        <section class="car-detail__features" data-animate>
+[85]          <article class="feature-card">
+[86]            <h3>Adaptive Track Suite</h3>
+[87]            <p>
+[88]              Dual-mode aero, titanium exhaust, and predictive damping keep the
+[89]              Apex pinned through fast transitions.
+[90]            </p>
+[91]          </article>
+[92]          <article class="feature-card">
+[93]            <h3>Driver Capsule</h3>
+[94]            <p>
+[95]              Alcantara-lined shell seats, sculpted dash, and heads-up telemetry
+[96]              put analytics in your periphery.
+[97]            </p>
+[98]          </article>
+[99]          <article class="feature-card">
+[100]            <h3>Telemetry Cloud</h3>
+[101]            <p>
+[102]              Session data syncs to your profile with video overlays, ready for
+[103]              coaching or social clips.
+[104]            </p>
+[105]          </article>
+[106]        </section>
+[107]
+[108]        <section class="car-detail__gallery" data-animate>
+[109]          <div class="section-head">
+[110]            <div>
+[111]              <p class="eyebrow">Gallery</p>
+[112]              <h2>Angles &amp; Interiors</h2>
+[113]            </div>
+[114]          </div>
+[115]          <div class="gallery-grid">
+[116]            <figure class="gallery-card">
+[117]              <img src="1.png" alt="Apex GT front quarter" />
+[118]              <span>Front quarter profile with forged center locks.</span>
+[119]            </figure>
+[120]            <figure class="gallery-card">
+[121]              <img src="1.png" alt="Apex GT side profile" />
+[122]              <span>Sculpted side intakes feed the twin charge coolers.</span>
+[123]            </figure>
+[124]            <figure class="gallery-card">
+[125]              <img src="1.png" alt="Apex GT cabin render" />
+[126]              <span>Track-shell seats with four-point anchor points.</span>
+[127]            </figure>
+[128]          </div>
+[129]        </section>
+[130]
+[131]        <section class="car-detail__cta" data-animate>
+[132]          <div>
+[133]            <h3>Ready to spec your Apex GT?</h3>
+[134]            <p>Lock a build slot with a concierge and tailor the livery.</p>
+[135]          </div>
+[136]          <a class="action solid" href="mailto:concierge@carprime.com"
+[137]            >Book a configuration call</a
+[138]          >
+[139]        </section>
+[140]      </main>
+[141]
+[142]      <footer class="site-footer">
+[143]        <div class="footer__brand">
+[144]          <div class="logo">
+[145]            <div class="logo__mark"></div>
+[146]            <div class="logo__text">
+[147]              <strong>Car</strong>
+[148]              <span>Prime</span>
+[149]            </div>
+[150]          </div>
+[151]          <p>Performance atelier for modern collectors.</p>
+[152]          <p class="footer__contact">concierge@carprime.com · +1 (415) 555-0186</p>
+[153]        </div>
+[154]        <div class="footer__links">
+[155]          <div>
+[156]            <strong>Explore</strong>
+[157]            <a href="index.html#showcase">Showcase</a>
+[158]            <a href="index.html#buy">Collections</a>
+[159]            <a href="index.html#faq">FAQ</a>
+[160]          </div>
+[161]          <div>
+[162]            <strong>Services</strong>
+[163]            <a href="#">Custom builds</a>
+[164]            <a href="#">Concierge</a>
+[165]            <a href="#">Logistics</a>
+[166]          </div>
+[167]          <div>
+[168]            <strong>Follow</strong>
+[169]            <a href="#">Instagram</a>
+[170]            <a href="#">YouTube</a>
+[171]            <a href="#">LinkedIn</a>
+[172]          </div>
+[173]        </div>
+[174]        <div class="footer__bottom">
+[175]          <span>&copy; 2025 CarPrime. All rights reserved.</span>
+[176]          <div class="footer__policies">
+[177]            <a href="#">Privacy</a>
+[178]            <a href="#">Terms</a>
+[179]          </div>
+[180]        </div>
+[181]      </footer>
+[182]    </div>
+[183]
+[184]    <script src="script.js"></script>
+[185]  </body>
+[186]</html>

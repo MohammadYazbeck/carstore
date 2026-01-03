@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="logo">
+          <div class="logo__mark"></div>
+          <div class="logo__text">
+            <strong>Car</strong>
+            <span>Prime</span>
+          </div>
+        </div>
+        <nav class="site-nav">
+          <a class="active" href="#showcase" data-i18n="nav.home">Home</a>
+          <a href="#buy" data-i18n="nav.garage">Garage</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          AR
+        </button>
+        <div class="header-actions">
+          <button class="action solid header-cta" data-i18n="cta.quote">
+            Get a Quote
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="showcase" data-animate>
+          <div class="hero__intro">
+            <p class="hero__eyebrow" data-i18n="hero.eyebrow">Buy a Car</p>
+            <h1 data-i18n="hero.heading">
+              Customized and Special Edition Car Only for You
+            </h1>
+            <p class="hero__tagline" data-i18n="hero.tagline">
+              Ready to Rev Up? Let's Hit the Road for a Test Drive!
+            </p>
+            <p class="hero__price" id="heroCarPrice"></p>
+            <div class="hero__cta">
+              <button class="action dark" data-i18n="hero.cta">
+                Let's Drive It! &rarr;
+              </button>
+            </div>
+          </div>
+          <div class="hero__gallery">
+            <button
+              class="hero-arrow hero-arrow--side"
+              data-direction="prev"
+              aria-label="Previous car"
+            >
+              &#8592;
+            </button>
+            <img
+              id="heroCarPrev"
+              class="hero__car hero__car--ghost"
+              src=""
+              alt="Previous car"
+              loading="lazy"
+            />
+            <div class="hero__car hero__car--main">
+              <img id="heroCarImage" src="" alt="Featured car" loading="lazy" />
+            </div>
+            <img
+              id="heroCarNext"
+              class="hero__car hero__car--ghost"
+              src=""
+              alt="Next car"
+              loading="lazy"
+            />
+            <button
+              class="hero-arrow hero-arrow--side"
+              data-direction="next"
+              aria-label="Next car"
+            >
+              &#8594;
+            </button>
+          </div>
+          <p class="hero__model" id="heroCarModel">
+            2021 Mercedes-AMG GT Stealth Edition
+          </p>
+          <div class="hero__stats-row">
+            <article class="stat-card" data-spec-index="0">
+              <div class="stat-icon"></div>
+              <div>
+                <strong class="stat-value">523 HP</strong>
+                <span class="stat-label">Max Power</span>
+              </div>
+            </article>
+            <article class="stat-card" data-spec-index="1">
+              <div class="stat-icon"></div>
+              <div>
+                <strong class="stat-value">3.3 s</strong>
+                <span class="stat-label">0-60 mph</span>
+              </div>
+            </article>
+            <article class="stat-card" data-spec-index="2">
+              <div class="stat-icon"></div>
+              <div>
+                <strong class="stat-value">194 mph</strong>
+                <span class="stat-label">Top Speed</span>
+              </div>
+            </article>
+            <article class="stat-card" data-spec-index="3">
+              <div class="stat-icon"></div>
+              <div>
+                <strong class="stat-value">4 Seats</strong>
+                <span class="stat-label">Leather made</span>
+              </div>
+            </article>
+          </div>
+          <div class="hero__selector" id="heroCarSelector"></div>
+        </section>
+
+        <section class="models" id="buy" data-animate>
+          <span id="pricing" class="anchor-target"></span>
+          <header class="section-head">
+            <div>
+              <p class="eyebrow" data-i18n="sections.garageEyebrow">
+                Our garage
+              </p>
+              <h2 data-i18n="sections.garageTitle">
+                Shop this season's hero cars.
+              </h2>
+            </div>
+          </header>
+          <div class="car-grid" id="carGrid"></div>
+        </section>
+
+        <section class="faq" id="faq" data-animate>
+          <header class="section-head">
+            <div>
+              <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+              <h2 data-i18n="faq.title">Questions collectors ask most.</h2>
+            </div>
+          </header>
+          <div class="faq__list">
+            <article class="faq__item">
+              <button class="faq__question">
+                <span data-i18n="faq.q1">How long does a bespoke order take?</span>
+                <span aria-hidden="true">&#x2796;</span>
+              </button>
+              <p class="faq__answer" data-i18n="faq.a1">
+                Build slots average 6–8 weeks. We share a weekly build log, live
+                paint updates, and final inspection footage before delivery.
+              </p>
+            </article>
+            <article class="faq__item">
+              <button class="faq__question">
+                <span data-i18n="faq.q2"
+                  >Can you source rare trims or discontinued models?</span
+                >
+                <span aria-hidden="true">&#x2796;</span>
+              </button>
+              <p class="faq__answer" data-i18n="faq.a2">
+                Yes. Our network spans private collections, factory vaults, and
+                global auctions. We handle provenance, servicing, and import
+                paperwork end-to-end.
+              </p>
+            </article>
+            <article class="faq__item">
+              <button class="faq__question">
+                <span data-i18n="faq.q3">What does delivery look like?</span>
+                <span aria-hidden="true">&#x2796;</span>
+              </button>
+              <p class="faq__answer" data-i18n="faq.a3">
+                Enclosed transport, on-site detailing, and a performance
+                specialist who walks you through drive modes, telemetry, and
+                maintenance rituals.
+              </p>
+            </article>
+            <article class="faq__item">
+              <button class="faq__question">
+                <span data-i18n="faq.q4"
+                  >Do you help with resale or refreshing a collection?</span
+                >
+                <span aria-hidden="true">&#x2796;</span>
+              </button>
+              <p class="faq__answer" data-i18n="faq.a4">
+                Absolutely. We can consign, refresh specs, or trade keys into a
+                new build. Our analysts prepare value reports and ideal timing
+                for the market.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer__brand">
+          <div class="logo">
+            <div class="logo__mark"></div>
+            <div class="logo__text">
+              <strong>Car</strong>
+              <span>Prime</span>
+            </div>
+          </div>
+          <p data-i18n="footer.tagline">
+            Performance atelier for modern collectors.
+          </p>
+          <p class="footer__contact" data-i18n="footer.contact">
+            concierge@carprime.com · +1 (415) 555-0186
+          </p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <strong data-i18n="footer.explore">Explore</strong>
+            <a href="#showcase" data-i18n="footer.showcase">Showcase</a>
+            <a href="#buy" data-i18n="footer.collections">Collections</a>
+            <a href="#faq" data-i18n="footer.faq">FAQ</a>
+          </div>
+          <div>
+            <strong data-i18n="footer.services">Services</strong>
+            <a href="#" data-i18n="footer.custom">Custom builds</a>
+            <a href="#" data-i18n="footer.concierge">Concierge</a>
+            <a href="#" data-i18n="footer.logistics">Logistics</a>
+          </div>
+          <div>
+            <strong data-i18n="footer.follow">Follow</strong>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span data-i18n="footer.rights">
+            &copy; 2025 CarPrime. All rights reserved.
+          </span>
+          <div class="footer__policies">
+            <a href="#" data-i18n="footer.privacy">Privacy</a>
+            <a href="#" data-i18n="footer.terms">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

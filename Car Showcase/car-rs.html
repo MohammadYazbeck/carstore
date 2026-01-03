@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RS Electric — Car Prime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="logo">
+          <div class="logo__mark"></div>
+          <div class="logo__text">
+            <strong>Car</strong>
+            <span>Prime</span>
+          </div>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html#showcase" data-i18n="nav.home">Home</a>
+          <a class="active" href="index.html#buy" data-i18n="nav.garage">Garage</a>
+          <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          AR
+        </button>
+        <div class="header-actions">
+          <a
+            class="action solid header-cta"
+            href="mailto:concierge@carprime.com"
+            data-i18n="cta.quote"
+            >Get a Quote</a
+          >
+        </div>
+      </header>
+
+      <main class="car-detail">
+        <a class="back-link" href="index.html#buy">&larr; Back to the garage</a>
+        <section class="car-detail__hero" data-animate>
+          <div class="car-detail__copy">
+            <p class="hero__eyebrow">
+              <span class="lang lang-en" lang="en">RS Electric</span>
+              <span class="lang lang-ar" lang="ar">آر إس إلكتريك</span>
+            </p>
+            <h1>
+              <span class="lang lang-en" lang="en">2025 RS Electric Touring</span>
+              <span class="lang lang-ar" lang="ar">آر إس إلكتريك تورينج 2025</span>
+            </h1>
+            <p>
+              <span class="lang lang-en" lang="en">
+                A dual-motor grand tourer built to slip through the air in near
+                silence. RS Electric balances instant torque with long-range
+                stamina and a lounge-grade cabin for continent-crossing days.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                سيارة جراند تورينج ثنائية المحركات تنساب في الهواء بهدوء شبه تام.
+                تجمع آر إس إلكتريك بين عزم فوري ومدى طويل مع مقصورة فاخرة
+                لرحلات القارات.
+              </span>
+            </p>
+            <p class="car-detail__price">
+              <span class="lang lang-en" lang="en">From $212,000</span>
+              <span class="lang lang-ar" lang="ar">ابتداءً من ‎$212,000</span>
+            </p>
+            <div class="car-detail__badges">
+              <span class="car-detail__badge">
+                <span class="lang lang-en" lang="en">Gran Turismo</span>
+                <span class="lang lang-ar" lang="ar">جران توريزمو</span>
+              </span>
+              <span class="car-detail__badge">
+                <span class="lang lang-en" lang="en">Dual motor</span>
+                <span class="lang lang-ar" lang="ar">محركان مزدوجان</span>
+              </span>
+              <span class="car-detail__badge">
+                <span class="lang lang-en" lang="en">Air suspension</span>
+                <span class="lang lang-ar" lang="ar">نظام تعليق هوائي</span>
+              </span>
+            </div>
+          </div>
+          <div class="car-detail__media">
+            <img src="2.png" alt="RS Electric touring" />
+          </div>
+        </section>
+
+        <section class="car-detail__stats" data-animate>
+          <article class="spec-card">
+            <span>
+              <span class="lang lang-en" lang="en">Max Power</span>
+              <span class="lang lang-ar" lang="ar">أقصى قوة</span>
+            </span>
+            <strong>590 HP</strong>
+            <p>
+              <span class="lang lang-en" lang="en">
+                High-output e-axles with vectoring torque delivery.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                محاور كهربائية عالية القدرة مع توزيع عزم متجه.
+              </span>
+            </p>
+          </article>
+          <article class="spec-card">
+            <span>
+              <span class="lang lang-en" lang="en">0–60 mph</span>
+              <span class="lang lang-ar" lang="ar">0-60 ميل</span>
+            </span>
+            <strong>3.6 s</strong>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Launch-ready software with intelligent traction feed.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                برمجيات انطلاق جاهزة مع تحكم ذكي بالتماسك.
+              </span>
+            </p>
+          </article>
+          <article class="spec-card">
+            <span>
+              <span class="lang lang-en" lang="en">Top Speed</span>
+              <span class="lang lang-ar" lang="ar">السرعة القصوى</span>
+            </span>
+            <strong>190 mph</strong>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Drag coefficient of 0.23 keeps the body planted.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                معامل سحب يبلغ 0.23 يحافظ على ثبات الهيكل.
+              </span>
+            </p>
+          </article>
+          <article class="spec-card">
+            <span>
+              <span class="lang lang-en" lang="en">Range</span>
+              <span class="lang lang-ar" lang="ar">المدى</span>
+            </span>
+            <strong>310 mi</strong>
+            <p>
+              <span class="lang lang-en" lang="en">
+                118 kWh pack with 350 kW fast-charging support.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                بطارية بسعة 118 كيلوواط ساعي تدعم شحناً سريعاً بقدرة 350 كيلوواط.
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="car-detail__features" data-animate>
+          <article class="feature-card">
+            <h3>
+              <span class="lang lang-en" lang="en">Panoramic Quiet</span>
+              <span class="lang lang-ar" lang="ar">هدوء بانورامي</span>
+            </h3>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Acoustic glass, laminated floor, and smart noise cancelling create
+                a cocoon during long drives.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                زجاج عازل للصوت وأرضية مُصفحة وإلغاء ضجيج ذكي يحيطك بفقاعة هدوء
+                في الرحلات الطويلة.
+              </span>
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>
+              <span class="lang lang-en" lang="en">Grand Tour Seating</span>
+              <span class="lang lang-ar" lang="ar">مقاعد الرحلات الكبرى</span>
+            </h3>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Four sculpted thrones with massage and climate zoning pair to a
+                floating center console.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                أربعة مقاعد منحوتة مع تدليك وتحكم حراري منفصل مرتبطة بكونسول
+                مركزي عائم.
+              </span>
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>
+              <span class="lang lang-en" lang="en">Route Intelligence</span>
+              <span class="lang lang-ar" lang="ar">ذكاء المسار</span>
+            </h3>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Cloud navigation preconditions the battery for upcoming chargers
+                and adapts to weather automatically.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                ملاحة سحابية تهيّئ البطارية لمحطات الشحن القادمة وتتكيف مع
+                الطقس تلقائياً.
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="car-detail__gallery" data-animate>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">
+                <span class="lang lang-en" lang="en">Gallery</span>
+                <span class="lang lang-ar" lang="ar">المعرض</span>
+              </p>
+              <h2>
+                <span class="lang lang-en" lang="en">Studio Views</span>
+                <span class="lang lang-ar" lang="ar">لقطات الاستوديو</span>
+              </h2>
+            </div>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-card">
+              <img src="2.png" alt="RS Electric coupe front" />
+              <span>
+                <span class="lang lang-en" lang="en">
+                  Signature lighting sweeps into the aero blades.
+                </span>
+                <span class="lang lang-ar" lang="ar">
+                  إضاءة مميزة تمتد إلى الشفرات الهوائية.
+                </span>
+              </span>
+            </figure>
+            <figure class="gallery-card">
+              <img src="2.png" alt="RS Electric profile" />
+              <span>
+                <span class="lang lang-en" lang="en">
+                  Long wheelbase and flush handles keep drag low.
+                </span>
+                <span class="lang lang-ar" lang="ar">
+                  قاعدة عجلات طويلة ومقابض مدمجة لخفض مقاومة الهواء.
+                </span>
+              </span>
+            </figure>
+            <figure class="gallery-card">
+              <img src="2.png" alt="RS Electric rear" />
+              <span>
+                <span class="lang lang-en" lang="en">
+                  Sculpted diffuser hides the active rear spoiler.
+                </span>
+                <span class="lang lang-ar" lang="ar">
+                  ناشر هواء منحوت يخفي الجناح الخلفي النشط.
+                </span>
+              </span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="car-detail__cta" data-animate>
+          <div>
+            <h3>
+              <span class="lang lang-en" lang="en">Design your RS Electric interior.</span>
+              <span class="lang lang-ar" lang="ar">صمّم مقصورة آر إس إلكتريك الخاصة بك.</span>
+            </h3>
+            <p>
+              <span class="lang lang-en" lang="en">
+                Pick leathers, veneers, and tech stacks with our studio.
+              </span>
+              <span class="lang lang-ar" lang="ar">
+                اختر الجلود والخشب والتقنيات المفضلة لديك مع فريق الاستوديو.
+              </span>
+            </p>
+          </div>
+          <div class="car-detail__cta-actions">
+            <a class="action solid" href="mailto:concierge@carprime.com">
+              <span class="lang lang-en" lang="en">Arrange a private viewing</span>
+              <span class="lang lang-ar" lang="ar">نسق معاينة خاصة</span>
+            </a>
+            <button
+              class="action ghost detail-ar"
+              data-car="rs"
+              data-i18n="hero.ar"
+              type="button"
+            >
+              View in AR
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer__brand">
+          <div class="logo">
+            <div class="logo__mark"></div>
+            <div class="logo__text">
+              <strong>Car</strong>
+              <span>Prime</span>
+            </div>
+          </div>
+          <p data-i18n="footer.tagline">
+            Performance atelier for modern collectors.
+          </p>
+          <p class="footer__contact" data-i18n="footer.contact">
+            concierge@carprime.com · +1 (415) 555-0186
+          </p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <strong data-i18n="footer.explore">Explore</strong>
+            <a href="index.html#showcase" data-i18n="footer.showcase">Showcase</a>
+            <a href="index.html#buy" data-i18n="footer.collections">Collections</a>
+            <a href="index.html#faq" data-i18n="footer.faq">FAQ</a>
+          </div>
+          <div>
+            <strong data-i18n="footer.services">Services</strong>
+            <a href="#" data-i18n="footer.custom">Custom builds</a>
+            <a href="#" data-i18n="footer.concierge">Concierge</a>
+            <a href="#" data-i18n="footer.logistics">Logistics</a>
+          </div>
+          <div>
+            <strong data-i18n="footer.follow">Follow</strong>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span data-i18n="footer.rights"
+            >&copy; 2025 CarPrime. All rights reserved.</span
+          >
+          <div class="footer__policies">
+            <a href="#" data-i18n="footer.privacy">Privacy</a>
+            <a href="#" data-i18n="footer.terms">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

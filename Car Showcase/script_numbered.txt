@@ -1,0 +1,239 @@
+
+---------- SCRIPT.JS
+[1]const cars = [
+[2]  {
+[3]    name: "Apex GT",
+[4]    type: "Coupe",
+[5]    model: "2024 Apex GT Carbon Edition",
+[6]    image: "1.png",
+[7]    price: "$248,500",
+[8]    specs: [
+[9]      { label: "Max Power", value: "680 HP", icon: "&#9889;" },
+[10]      { label: "0-60 mph", value: "3.1 sec", icon: "&#9201;" },
+[11]      { label: "Top Speed", value: "206 mph", icon: "&#128640;" },
+[12]      { label: "Seating", value: "4 Seats", icon: "&#128186;" },
+[13]    ],
+[14]  },
+[15]  {
+[16]    name: "RS Electric",
+[17]    type: "Gran Turismo",
+[18]    model: "2025 RS Electric Touring",
+[19]    image: "2.png",
+[20]    price: "$212,000",
+[21]    specs: [
+[22]      { label: "Max Power", value: "590 HP", icon: "&#9889;" },
+[23]      { label: "0-60 mph", value: "3.6 sec", icon: "&#9201;" },
+[24]      { label: "Top Speed", value: "190 mph", icon: "&#128640;" },
+[25]      { label: "Range", value: "310 mi", icon: "&#9881;" },
+[26]    ],
+[27]  },
+[28]  {
+[29]    name: "Trackline S",
+[30]    type: "Hyper sedan",
+[31]    model: "2024 Trackline S Pro Series",
+[32]    image: "3.png",
+[33]    price: "$308,000",
+[34]    specs: [
+[35]      { label: "Max Power", value: "720 HP", icon: "&#9889;" },
+[36]      { label: "0-60 mph", value: "2.8 sec", icon: "&#9201;" },
+[37]      { label: "Top Speed", value: "216 mph", icon: "&#128640;" },
+[38]      { label: "Seating", value: "4 Seats", icon: "&#128186;" },
+[39]    ],
+[40]  },
+[41]  {
+[42]    name: "Roadster 01",
+[43]    type: "Open top",
+[44]    model: "2023 Roadster 01 Skyline",
+[45]    image: "4.png",
+[46]    price: "$189,000",
+[47]    specs: [
+[48]      { label: "Max Power", value: "560 HP", icon: "&#9889;" },
+[49]      { label: "0-60 mph", value: "3.9 sec", icon: "&#9201;" },
+[50]      { label: "Top Speed", value: "189 mph", icon: "&#128640;" },
+[51]      { label: "Seating", value: "2 Seats", icon: "&#128186;" },
+[52]    ],
+[53]  },
+[54]];
+[55]
+[56]const heroSection = document.querySelector(".hero");
+[57]const heroImage = document.getElementById("heroCarImage");
+[58]const heroModel = document.getElementById("heroCarModel");
+[59]const heroPrice = document.getElementById("heroCarPrice");
+[60]const heroPrevImage = document.getElementById("heroCarPrev");
+[61]const heroNextImage = document.getElementById("heroCarNext");
+[62]const statCards = Array.from(document.querySelectorAll(".stat-card"));
+[63]const selector = document.getElementById("heroCarSelector");
+[64]const controls = document.querySelectorAll("[data-direction]");
+[65]let optionButtons = [];
+[66]let currentCar = 0;
+[67]let lastDirection = 1;
+[68]
+[69]const centerOptionInView = (button) => {
+[70]  if (!selector) return;
+[71]  const containerWidth = selector.clientWidth;
+[72]  const maxScroll = Math.max(selector.scrollWidth - containerWidth, 0);
+[73]  const desired =
+[74]    button.offsetLeft - containerWidth / 2 + button.offsetWidth / 2;
+[75]  const target = Math.min(Math.max(desired, 0), maxScroll);
+[76]  selector.scrollTo({ left: target, behavior: "smooth" });
+[77]};
+[78]
+[79]const heroImageAnimationCleanUp = () => {
+[80]  if (!heroImage) return;
+[81]  heroImage.classList.remove("slide-in-left", "slide-in-right");
+[82]};
+[83]
+[84]if (heroImage) {
+[85]  heroImage.addEventListener("animationend", heroImageAnimationCleanUp);
+[86]}
+[87]
+[88]const fadeInImage = (src, alt, direction) => {
+[89]  if (!heroImage) return;
+[90]  heroImage.classList.add("is-changing");
+[91]  const newImage = new Image();
+[92]  newImage.onload = () => {
+[93]    heroImageAnimationCleanUp();
+[94]    heroImage.src = newImage.src;
+[95]    heroImage.alt = alt;
+[96]    requestAnimationFrame(() => {
+[97]      heroImage.classList.remove("is-changing");
+[98]      const directionClass = direction === -1 ? "slide-in-left" : "slide-in-right";
+[99]      heroImage.classList.add(directionClass);
+[100]    });
+[101]  };
+[102]  newImage.src = src;
+[103]};
+[104]
+[105]const updateAdjacentImages = (index) => {
+[106]  if (!heroPrevImage || !heroNextImage) return;
+[107]  const prevCar = cars[(index - 1 + cars.length) % cars.length];
+[108]  const nextCar = cars[(index + 1) % cars.length];
+[109]  heroPrevImage.src = prevCar.image;
+[110]  heroPrevImage.alt = prevCar.name;
+[111]  heroNextImage.src = nextCar.image;
+[112]  heroNextImage.alt = nextCar.name;
+[113]};
+[114]
+[115]let heroTransitionTimeout;
+[116]
+[117]const triggerHeroTransition = () => {
+[118]  if (!heroSection) return;
+[119]  heroSection.classList.add("is-switching");
+[120]  clearTimeout(heroTransitionTimeout);
+[121]  heroTransitionTimeout = setTimeout(() => {
+[122]    heroSection.classList.remove("is-switching");
+[123]  }, 650);
+[124]};
+[125]
+[126]const renderCar = (index, direction = 1) => {
+[127]  if (!heroImage || !heroModel) return;
+[128]  lastDirection = direction;
+[129]  triggerHeroTransition();
+[130]  const car = cars[index];
+[131]  heroModel.textContent = car.model;
+[132]  if (heroPrice) {
+[133]    heroPrice.textContent = `From ${car.price}`;
+[134]  }
+[135]  fadeInImage(car.image, car.name, direction);
+[136]  updateAdjacentImages(index);
+[137]
+[138]  statCards.forEach((card, specIndex) => {
+[139]    const spec = car.specs[specIndex];
+[140]    if (!spec) return;
+[141]    card.querySelector(".stat-icon").innerHTML = spec.icon;
+[142]    card.querySelector(".stat-value").textContent = spec.value;
+[143]    card.querySelector(".stat-label").textContent = spec.label;
+[144]  });
+[145]
+[146]  optionButtons.forEach((btn, idx) => {
+[147]    btn.classList.toggle("active", idx === index);
+[148]    if (idx === index) {
+[149]      btn.setAttribute("aria-current", "true");
+[150]      centerOptionInView(btn);
+[151]    } else {
+[152]      btn.removeAttribute("aria-current");
+[153]    }
+[154]  });
+[155]};
+[156]
+[157]const buildSelector = () => {
+[158]  if (!selector) return;
+[159]  selector.innerHTML = "";
+[160]  optionButtons = cars.map((car, index) => {
+[161]    const button = document.createElement("button");
+[162]    button.className = "car-option";
+[163]    const formattedIndex = String(index + 1).padStart(2, "0");
+[164]    const leadSpec = car.specs[0]?.value ?? "";
+[165]    const secondarySpec = car.specs[1]?.value ?? "";
+[166]    button.innerHTML = `
+[167]      <span class="option-indicator"></span>
+[168]      <div class="option-body">
+[169]        <div class="option-top">
+[170]          <span class="option-name">${car.name}</span>
+[171]          <span class="option-index">#${formattedIndex}</span>
+[172]        </div>
+[173]        <div class="option-type">${car.type}</div>
+[174]        <div class="option-bottom">
+[175]          <span class="option-chip">${leadSpec}</span>
+[176]          <span class="option-chip">${secondarySpec}</span>
+[177]        </div>
+[178]      </div>
+[179]    `;
+[180]    button.type = "button";
+[181]    button.addEventListener("click", () => {
+[182]      if (index === currentCar) return;
+[183]      const direction = index > currentCar ? 1 : -1;
+[184]      currentCar = index;
+[185]      renderCar(currentCar, direction);
+[186]    });
+[187]    selector.appendChild(button);
+[188]    return button;
+[189]  });
+[190]};
+[191]
+[192]const setupControls = () => {
+[193]  controls.forEach((button) => {
+[194]    button.addEventListener("click", () => {
+[195]      const direction = button.dataset.direction === "next" ? 1 : -1;
+[196]      currentCar = (currentCar + direction + cars.length) % cars.length;
+[197]      renderCar(currentCar, direction);
+[198]    });
+[199]  });
+[200]
+[201]  if (selector) {
+[202]    selector.addEventListener("wheel", (event) => {
+[203]      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+[204]        selector.scrollBy({ left: event.deltaY, behavior: "smooth" });
+[205]        event.preventDefault();
+[206]      }
+[207]    });
+[208]  }
+[209]};
+[210]
+[211]const setupAnimations = () => {
+[212]  const observer = new IntersectionObserver(
+[213]    (entries) => {
+[214]      entries.forEach((entry) => {
+[215]        if (entry.isIntersecting) {
+[216]          entry.target.classList.add("visible");
+[217]          observer.unobserve(entry.target);
+[218]        }
+[219]      });
+[220]    },
+[221]    {
+[222]      threshold: 0.2,
+[223]      rootMargin: "0px 0px -40px 0px",
+[224]    }
+[225]  );
+[226]
+[227]  document.querySelectorAll("[data-animate]").forEach((element) => {
+[228]    observer.observe(element);
+[229]  });
+[230]};
+[231]
+[232]document.addEventListener("DOMContentLoaded", () => {
+[233]  buildSelector();
+[234]  setupControls();
+[235]  setupAnimations();
+[236]  renderCar(currentCar, lastDirection);
+[237]});

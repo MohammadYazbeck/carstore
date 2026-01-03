@@ -1,0 +1,308 @@
+
+---------- INDEX.HTML
+[1]<!DOCTYPE html>
+[2]<html lang="en">
+[3]  <head>
+[4]    <meta charset="UTF-8" />
+[5]    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+[6]    <title>Car Showcase</title>
+[7]    <link rel="preconnect" href="https://fonts.googleapis.com" />
+[8]    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+[9]    <link
+[10]      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+[11]      rel="stylesheet"
+[12]    />
+[13]    <link rel="stylesheet" href="styles.css" />
+[14]  </head>
+[15]
+[16]  <body>
+[17]    <div class="page">
+[18]      <header class="site-header">
+[19]        <div class="logo">
+[20]          <div class="logo__mark"></div>
+[21]          <div class="logo__text">
+[22]            <strong>Car</strong>
+[23]            <span>Prime</span>
+[24]          </div>
+[25]        </div>
+[26]        <nav class="site-nav">
+[27]          <a class="active" href="#showcase">Home</a>
+[28]          <a href="#buy">Garage</a>
+[29]          <a href="#faq">FAQ</a>
+[30]        </nav>
+[31]        <div class="header-actions">
+[32]          <button class="action solid header-cta">Get a Quote</button>
+[33]        </div>
+[34]      </header>
+[35]
+[36]      <main>
+[37]        <section class="hero" id="showcase" data-animate>
+[38]          <div class="hero__intro">
+[39]            <p class="hero__eyebrow">Buy a Car</p>
+[40]            <h1>Customized and Special Edition Car Only for You</h1>
+[41]            <p class="hero__tagline">
+[42]              Ready to Rev Up? Let's Hit the Road for a Test Drive!
+[43]            </p>
+[44]            <p class="hero__price" id="heroCarPrice">From $245,000</p>
+[45]            <div class="hero__cta">
+[46]              <button class="action dark">Let's Drive It! &rarr;</button>
+[47]            </div>
+[48]          </div>
+[49]          <div class="hero__gallery">
+[50]            <button
+[51]              class="hero-arrow hero-arrow--side"
+[52]              data-direction="prev"
+[53]              aria-label="Previous car"
+[54]            >
+[55]              &#8592;
+[56]            </button>
+[57]            <img
+[58]              id="heroCarPrev"
+[59]              class="hero__car hero__car--ghost"
+[60]              src=""
+[61]              alt="Previous car"
+[62]              loading="lazy"
+[63]            />
+[64]            <div class="hero__car hero__car--main">
+[65]              <img id="heroCarImage" src="" alt="Featured car" loading="lazy" />
+[66]            </div>
+[67]            <img
+[68]              id="heroCarNext"
+[69]              class="hero__car hero__car--ghost"
+[70]              src=""
+[71]              alt="Next car"
+[72]              loading="lazy"
+[73]            />
+[74]            <button
+[75]              class="hero-arrow hero-arrow--side"
+[76]              data-direction="next"
+[77]              aria-label="Next car"
+[78]            >
+[79]              &#8594;
+[80]            </button>
+[81]          </div>
+[82]          <p class="hero__model" id="heroCarModel">
+[83]            2021 Mercedes-AMG GT Stealth Edition
+[84]          </p>
+[85]          <div class="hero__stats-row">
+[86]            <article class="stat-card" data-spec-index="0">
+[87]              <div class="stat-icon"></div>
+[88]              <div>
+[89]                <strong class="stat-value">523 HP</strong>
+[90]                <span class="stat-label">Max Power</span>
+[91]              </div>
+[92]            </article>
+[93]            <article class="stat-card" data-spec-index="1">
+[94]              <div class="stat-icon"></div>
+[95]              <div>
+[96]                <strong class="stat-value">3.3 s</strong>
+[97]                <span class="stat-label">0-60 mph</span>
+[98]              </div>
+[99]            </article>
+[100]            <article class="stat-card" data-spec-index="2">
+[101]              <div class="stat-icon"></div>
+[102]              <div>
+[103]                <strong class="stat-value">194 mph</strong>
+[104]                <span class="stat-label">Top Speed</span>
+[105]              </div>
+[106]            </article>
+[107]            <article class="stat-card" data-spec-index="3">
+[108]              <div class="stat-icon"></div>
+[109]              <div>
+[110]                <strong class="stat-value">4 Seats</strong>
+[111]                <span class="stat-label">Leather made</span>
+[112]              </div>
+[113]            </article>
+[114]          </div>
+[115]          <div class="hero__selector" id="heroCarSelector"></div>
+[116]        </section>
+[117]
+[118]        <section class="models" id="buy" data-animate>
+[119]          <span id="pricing" class="anchor-target"></span>
+[120]          <header class="section-head">
+[121]            <div>
+[122]              <p class="eyebrow">Our garage</p>
+[123]              <h2>Shop this season's hero cars.</h2>
+[124]            </div>
+[125]          </header>
+[126]          <div class="car-grid">
+[127]            <article class="car-card">
+[128]              <div class="car-card__media">
+[129]                <img src="1.png" alt="Apex GT" loading="lazy" />
+[130]              </div>
+[131]              <div class="car-card__body">
+[132]              <div>
+[133]                <span class="car-card__type">Coupe</span>
+[134]                <p class="car-card__price">From $248,500</p>
+[135]                <h3>Apex GT</h3>
+[136]                <p>Carbon edition tuned for ultimate response.</p>
+[137]                </div>
+[138]                <div class="car-card__meta">
+[139]                  <span>680 HP</span>
+[140]                  <span>3.1s</span>
+[141]                  <span>206 mph</span>
+[142]                </div>
+[143]                <a class="car-card__link" href="car-apex.html">View car &rarr;</a>
+[144]              </div>
+[145]            </article>
+[146]            <article class="car-card">
+[147]              <div class="car-card__media">
+[148]                <img src="2.png" alt="RS Electric" loading="lazy" />
+[149]              </div>
+[150]              <div class="car-card__body">
+[151]              <div>
+[152]                <span class="car-card__type">Gran Turismo</span>
+[153]                <p class="car-card__price">From $212,000</p>
+[154]                <h3>RS Electric</h3>
+[155]                <p>Grand touring EV with dual-motor confidence.</p>
+[156]                </div>
+[157]                <div class="car-card__meta">
+[158]                  <span>590 HP</span>
+[159]                  <span>3.6s</span>
+[160]                  <span>190 mph</span>
+[161]                </div>
+[162]                <a class="car-card__link" href="car-rs.html">View car &rarr;</a>
+[163]              </div>
+[164]            </article>
+[165]            <article class="car-card">
+[166]              <div class="car-card__media">
+[167]                <img src="3.png" alt="Trackline S" loading="lazy" />
+[168]              </div>
+[169]              <div class="car-card__body">
+[170]              <div>
+[171]                <span class="car-card__type">Hyper Sedan</span>
+[172]                <p class="car-card__price">From $308,000</p>
+[173]                <h3>Trackline S</h3>
+[174]                <p>Race-spec aero married to handcrafted luxury.</p>
+[175]                </div>
+[176]                <div class="car-card__meta">
+[177]                  <span>720 HP</span>
+[178]                  <span>2.8s</span>
+[179]                  <span>216 mph</span>
+[180]                </div>
+[181]                <a class="car-card__link" href="car-trackline.html">View car &rarr;</a>
+[182]              </div>
+[183]            </article>
+[184]            <article class="car-card">
+[185]              <div class="car-card__media">
+[186]                <img src="4.png" alt="Roadster 01" loading="lazy" />
+[187]              </div>
+[188]              <div class="car-card__body">
+[189]              <div>
+[190]                <span class="car-card__type">Roadster</span>
+[191]                <p class="car-card__price">From $189,000</p>
+[192]                <h3>Roadster 01</h3>
+[193]                <p>Open-air charisma tuned for coastal touring.</p>
+[194]                </div>
+[195]                <div class="car-card__meta">
+[196]                  <span>560 HP</span>
+[197]                  <span>3.9s</span>
+[198]                  <span>189 mph</span>
+[199]                </div>
+[200]                <a class="car-card__link" href="car-roadster.html">View car &rarr;</a>
+[201]              </div>
+[202]            </article>
+[203]          </div>
+[204]        </section>
+[205]
+[206]        <section class="faq" id="faq" data-animate>
+[207]          <header class="section-head">
+[208]            <div>
+[209]              <p class="eyebrow">FAQ</p>
+[210]              <h2>Questions collectors ask most.</h2>
+[211]            </div>
+[212]          </header>
+[213]          <div class="faq__list">
+[214]            <article class="faq__item">
+[215]              <button class="faq__question">
+[216]                How long does a bespoke order take?
+[217]                <span>&#x2796;</span>
+[218]              </button>
+[219]              <p class="faq__answer">
+[220]                Build slots average 6&ndash;8 weeks. We share a weekly build log,
+[221]                live paint updates, and final inspection footage before
+[222]                delivery.
+[223]              </p>
+[224]            </article>
+[225]            <article class="faq__item">
+[226]              <button class="faq__question">
+[227]                Can you source rare trims or discontinued models?
+[228]                <span>&#x2796;</span>
+[229]              </button>
+[230]              <p class="faq__answer">
+[231]                Yes. Our network spans private collections, factory vaults, and
+[232]                global auctions. We handle provenance, servicing, and import
+[233]                paperwork end-to-end.
+[234]              </p>
+[235]            </article>
+[236]            <article class="faq__item">
+[237]              <button class="faq__question">
+[238]                What does delivery look like?
+[239]                <span>&#x2796;</span>
+[240]              </button>
+[241]              <p class="faq__answer">
+[242]                Enclosed transport, on-site detailing, and a performance
+[243]                specialist who walks you through drive modes, telemetry, and
+[244]                maintenance rituals.
+[245]              </p>
+[246]            </article>
+[247]            <article class="faq__item">
+[248]              <button class="faq__question">
+[249]                Do you help with resale or refreshing a collection?
+[250]                <span>&#x2796;</span>
+[251]              </button>
+[252]              <p class="faq__answer">
+[253]                Absolutely. We can consign, refresh specs, or trade keys into a
+[254]                new build. Our analysts prepare value reports and ideal timing
+[255]                for the market.
+[256]              </p>
+[257]            </article>
+[258]          </div>
+[259]        </section>
+[260]      </main>
+[261]
+[262]      <footer class="site-footer">
+[263]        <div class="footer__brand">
+[264]          <div class="logo">
+[265]            <div class="logo__mark"></div>
+[266]            <div class="logo__text">
+[267]              <strong>Car</strong>
+[268]              <span>Prime</span>
+[269]            </div>
+[270]          </div>
+[271]          <p>Performance atelier for modern collectors.</p>
+[272]          <p class="footer__contact">concierge@carprime.com · +1 (415) 555-0186</p>
+[273]        </div>
+[274]        <div class="footer__links">
+[275]          <div>
+[276]            <strong>Explore</strong>
+[277]            <a href="#showcase">Showcase</a>
+[278]            <a href="#buy">Collections</a>
+[279]            <a href="#faq">FAQ</a>
+[280]          </div>
+[281]          <div>
+[282]            <strong>Services</strong>
+[283]            <a href="#">Custom builds</a>
+[284]            <a href="#">Concierge</a>
+[285]            <a href="#">Logistics</a>
+[286]          </div>
+[287]          <div>
+[288]            <strong>Follow</strong>
+[289]            <a href="#">Instagram</a>
+[290]            <a href="#">YouTube</a>
+[291]            <a href="#">LinkedIn</a>
+[292]          </div>
+[293]        </div>
+[294]        <div class="footer__bottom">
+[295]          <span>&copy; 2025 CarPrime. All rights reserved.</span>
+[296]          <div class="footer__policies">
+[297]            <a href="#">Privacy</a>
+[298]            <a href="#">Terms</a>
+[299]          </div>
+[300]        </div>
+[301]      </footer>
+[302]    </div>
+[303]
+[304]    <script src="script.js"></script>
+[305]  </body>
+[306]</html>
